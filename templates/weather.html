@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Details</h1>
+        <div class="weather-info">
+            <p><strong>City:</strong> {{ weather.city }}</p>
+            <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p>
+            <p><strong>Weather:</strong> {{ weather.description }}</p>
+            <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
+            <p><strong>Wind Speed:</strong> {{ weather.wind_speed }} m/s</p>
+            <!-- Display weather icon based on weather condition -->
+            {% if weather.description == 'clear sky' %}
+                <i class="fas fa-sun"></i> <!-- Sunny icon -->
+            {% elif weather.description == 'few clouds' or weather.description == 'scattered clouds' %}
+                <i class="fas fa-cloud-sun"></i> <!-- Partly cloudy icon -->
+            {% elif weather.description == 'broken clouds' or weather.description == 'overcast clouds' %}
+                <i class="fas fa-cloud"></i> <!-- Cloudy icon -->
+            {% elif weather.description == 'shower rain' or weather.description == 'rain' %}
+                <i class="fas fa-cloud-showers-heavy"></i> <!-- Rainy icon -->
+            {% elif weather.description == 'thunderstorm' %}
+                <i class="fas fa-bolt"></i> <!-- Thunderstorm icon -->
+            {% elif weather.description == 'snow' %}
+                <i class="fas fa-snowflake"></i> <!-- Snowy icon -->
+            {% elif weather.description == 'mist' or weather.description == 'fog' %}
+                <i class="fas fa-smog"></i> <!-- Foggy icon -->
+            {% else %}
+                <i class="fas fa-question-circle"></i> <!-- Default icon -->
+            {% endif %}
+        </div>
+        <!-- "Return to Home" button -->
+        <a href="/" class="return-btn">Return to Home</a>
+    </div>
+</body>
+</html>
