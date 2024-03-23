@@ -28,7 +28,7 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    text-align: center; /* Center-align text within the container */
+    text-align: center; 
 }
 
 .form-container label {
@@ -85,22 +85,22 @@ h1 {
 
 /* Add weather icons */
 .weather-info i {
-    font-size: 3em; /* Set the font size of the icons */
-    margin-bottom: 10px; /* Add some bottom margin for spacing */
-    color: #333; /* Set the color of the icons */
+    font-size: 3em; /* set the font size of the icons */
+    margin-bottom: 10px; /* add some bottom margin for spacing */
+    color: #333; /* set the color of the icons */
 }
 
 /* Style weather icons based on weather condition */
 .weather-info .fas.fa-sun {
-    color: #FFD700; /* Yellow color for sunny weather */
+    color: #FFD700; /* Yellow for sunny weather */
 }
 
 .weather-info .fas.fa-cloud-sun {
-    color: #87CEEB; /* Light blue color for partly cloudy weather */
+    color: #87CEEB; /* Blue for light clouds weather */
 }
 
 .weather-info .fas.fa-cloud {
-    color: #A9A9A9; /* Gray color for cloudy weather */
+    color: #A9A9A9; /* Gray color for heavy clouds weather */
 }
 
 .weather-info .fas.fa-cloud-showers-heavy {
@@ -108,11 +108,11 @@ h1 {
 }
 
 .weather-info .fas.fa-bolt {
-    color: #FFA500; /* Orange color for thunderstorm */
+    color: #FFA500; /* Orange color for thunders */
 }
 
 .weather-info .fas.fa-snowflake {
-    color: #FFFFFF; /* White color for snowy weather */
+    color: #FFFFFF; /* White color for snow weather */
 }
 
 .weather-info .fas.fa-smog {
